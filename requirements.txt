@@ -1,0 +1,14 @@
+# LangChain ecosystem (Version 0.3.x is recommended for stability)
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-core>=0.3.0
+langchain-huggingface>=0.1.0
+
+# Vector Database
+chromadb>=0.5.0
+
+# Embedding Models
+sentence-transformers>=3.0.0
+
+# Data Manipulation
+pandas>=2.2.0
