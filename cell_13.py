@@ -1,23 +1,23 @@
-# RAG Preprocessing for Qwen/Qwen3 Model
+# RAG Preprocessing for Qwen/Qwen1.5-7B Model
 import pandas as pd
 from langchain_community.document_loaders import DataFrameLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter # Updated import path
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
-from langchain.schema import Document
+from langchain_community.vectorstores import Chroma
+from langchain_core.documents import Document # Updated import path
 import os
 
 def main():
     # 1. Load Data
     # Ensure the path is correct relative to where you run this script
-    file_path = 'Mental_Health_FAQ.csv'
+    file_path = '/content/nlp-project-1/dataset/Mental_Health_FAQ.csv' # Updated path to refer to the cloned GitHub repo
     if not os.path.exists(file_path):
         print(f"Error: File not found at {file_path}")
         return
 
     print("Loading data...")
     df = pd.read_csv(file_path)
-    
+
     # Create a new column that combines Question and Answer for the embedding content
     # This ensures the retrieval system finds relevant answers based on query similarity
     # to both the question and the answer content.
@@ -50,7 +50,7 @@ def main():
     # 5. Vector Store Creation
     persist_directory = './chroma_db'
     print(f"Creating vector store at {persist_directory}...")
-    
+
     # Optional: Clear existing DB to avoid duplicates if running multiple times
     # import shutil
     # if os.path.exists(persist_directory):
@@ -61,7 +61,7 @@ def main():
         embedding=embeddings,
         persist_directory=persist_directory
     )
-    
+
     print(f"Vector store created successfully at {persist_directory} with {len(splits)} documents.")
 
 if __name__ == "__main__":

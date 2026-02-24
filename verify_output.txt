@@ -1,0 +1,10 @@
+Cell 18: from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig # Import BitsAndBytesConfig
+Cell 18: # The original import was from langchain_classic.chains, but RetrievalQA is typically from langchain.chains
+Cell 18: from langchain.chains import RetrievalQA # Corrected import for RetrievalQA
+Cell 18: # 3. Create a Hugging Face text generation pipeline
+Cell 18: print("Creating Hugging Face text generation pipeline...")
+Cell 18: hf_pipeline = pipeline(
+Cell 18: llm = HuggingFacePipeline(pipeline=hf_pipeline)
+Cell 18: # 8. Set up the RAG chain using RetrievalQA
+Cell 18: qa_chain = RetrievalQA.from_chain_type(
+Cell 18: print("RetrievalQA chain initialized with Qwen1.5-7B and Chroma DB.")
