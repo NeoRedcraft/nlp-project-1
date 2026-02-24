@@ -12,8 +12,8 @@ chromadb>=0.6.0
 # Embedding Models
 sentence-transformers>=3.0.1
 
-# Transformers & Torch (Qwen requires >=4.51.0)
-transformers>=4.51.0
+# Transformers & Torch (Qwen requires >=4.40.0)
+transformers>=4.40.0
 torch>=2.1.0
 accelerate>=0.26.0
 
@@ -22,3 +22,6 @@ huggingface_hub>=0.23.0
 
 # Data Manipulation
 pandas>=2.2.2
+
+# Langchain
+langchain==1.0.5
