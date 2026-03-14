@@ -29,5 +29,6 @@ A domain-specific mental health chatbot using a Retrieval-Augmented Generation (
 </pre>
 ## 🌐 Web Deployment
 Use the interactive Streamlit web app hosted by Huggingface Spaces to interact with the RAG system chatbot!
+
 🔗 **Live Demo:**  
 https://huggingface.co/spaces/NeoRedcraft/Mental_Health_RAG
