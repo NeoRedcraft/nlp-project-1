@@ -8,6 +8,26 @@ A domain-specific mental health chatbot using a Retrieval-Augmented Generation (
 - [UCOP - Promoting Student Mental Health](https://www.ucop.edu/student-mental-health-resources/_files/pdf/PSMH-guide.pdf)
 - [Kaggle - Mental Health Counseling Conversations](https://www.kaggle.com/datasets/melissamonfared/mental-health-counseling-conversations-k)
 ## 📄 File Description:
+<pre>
+├── 📁 chroma_db
+│     ↳ Vector database used to store embeddings for document retrieval
+│
+├── 📁 dataset
+│     ↳ Contains the datasets used for training, evaluation, or retrieval
+│
+├── 📁 streamlit
+│     ↳ Source code for the Streamlit web interface used to interact with the system
+│
+├── 📓 Final.ipynb
+│     ↳ Main notebook containing the full implementation, experimentation, and evaluation
+│
+├── 📄 README.md
+│     ↳ Documentation explaining the project structure, usage, and setup
+│
+└── 📦 requirements.txt
+      ↳ List of Python dependencies required to run the project
+</pre>
 ## 🌐 Web Deployment
-
+Use the interactive Streamlit web app hosted by Huggingface Spaces to interact with the RAG system chatbot!
 🔗 **Live Demo:**  
+https://huggingface.co/spaces/NeoRedcraft/Mental_Health_RAG
